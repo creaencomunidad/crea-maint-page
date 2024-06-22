@@ -1,5 +1,5 @@
 ---
-import Footer from '../components/Footer.astro';
+//import Footer from '../components/Footer.astro';
 
 interface Props {
 	title: string;
@@ -12,14 +12,15 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Centro Fisioterapeutico con enfoque en comunidad, donde la rehabilitación se realiza acorde a la patología y actividades de la vida diaria del/la usuario/a." />
+		<meta name="keywords" content="Fisioterapia, Fisioterapeuta, Osteopatia, rehabilitacion, Cali, Valle del Cauca, Buga ">
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body class="flex flex-col content-center min-h-screen">
-		<main class="flex flex-col flex-wrap content-center justify-center flex-grow">
+		<main class="flex flex-col flex-wrap content-center justify-evenly flex-grow">
 			<slot />
 		</main>
 	</body>
@@ -35,6 +36,9 @@ const { title } = Astro.props;
 			rgb(var(--accent-light)) 30%,
 			white 60%
 		);
+	}
+	main {
+		margin: 20px;
 	}
 	html {
 		font-family: system-ui, sans-serif;
